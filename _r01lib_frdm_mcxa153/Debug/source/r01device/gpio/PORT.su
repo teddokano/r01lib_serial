@@ -1,0 +1,7 @@
+../source/r01device/gpio/PORT.cpp:9:1:PORT::PORT(GPIO_base&, int, uint8_t)	0	static
+../source/r01device/gpio/PORT.cpp:14:6:void PORT::config(uint8_t)	0	static
+../source/r01device/gpio/PORT.cpp:19:6:void PORT::set(access_word, uint8_t)	0	static
+../source/r01device/gpio/PORT.cpp:24:7:PORT& PORT::operator=(uint8_t)	8	static
+../source/r01device/gpio/PORT.cpp:30:7:PORT& PORT::operator=(PORT&)	0	static
+../source/r01device/gpio/PORT.cpp:35:1:PORT::operator int()	8	static
+../source/r01device/gpio/PORT.cpp:40:1:GPIO_PORT::GPIO_PORT(GPIO_base&, int, uint8_t)	0	static

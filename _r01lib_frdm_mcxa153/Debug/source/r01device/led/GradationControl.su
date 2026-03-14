@@ -1,0 +1,10 @@
+../source/r01device/led/GradationControl.cpp:16:1:GradationControl::~GradationControl()	0	static
+../source/r01device/led/GradationControl.cpp:16:1:virtual GradationControl::~GradationControl()	8	static
+../source/r01device/led/GradationControl.cpp:20:7:float GradationControl::set_gradation(float, float, bool, bool, float, float, bool, bool)	88	static
+../source/r01device/led/GradationControl.cpp:93:6:void GradationControl::gradation_channel_enable(uint32_t)	32	dynamic
+../source/r01device/led/GradationControl.cpp:107:6:void GradationControl::gradation_group_assign(uint32_t)	48	dynamic
+../source/r01device/led/GradationControl.cpp:9:1:GradationControl::GradationControl(PCA995x*, int, uint32_t)	16	static
+../source/r01device/led/GradationControl.cpp:131:6:void GradationControl::add_channel(uint8_t)	24	static
+../source/r01device/led/GradationControl.cpp:160:6:void GradationControl::control(int)	24	static
+../source/r01device/led/GradationControl.cpp:176:6:void GradationControl::start(bool)	0	static
+../source/r01device/led/GradationControl.cpp:181:6:void GradationControl::stop()	0	static

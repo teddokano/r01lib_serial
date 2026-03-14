@@ -1,0 +1,11 @@
+../source/r01device/rtc/SPI_for_RTC.cpp:10:1:SPI_for_RTC::~SPI_for_RTC()	8	static
+../source/r01device/rtc/SPI_for_RTC.cpp:10:1:virtual SPI_for_RTC::~SPI_for_RTC()	8	static
+../source/r01device/rtc/SPI_for_RTC.cpp:32:5:virtual int SPI_for_RTC::reg_w(uint8_t, uint8_t)	16	static
+../source/r01device/rtc/SPI_for_RTC.cpp:56:9:virtual uint8_t SPI_for_RTC::reg_r(uint8_t)	16	static
+../source/r01device/rtc/SPI_for_RTC.cpp:20:5:virtual int SPI_for_RTC::reg_w(uint8_t, const uint8_t*, uint16_t)	24	dynamic
+../source/r01device/rtc/SPI_for_RTC.cpp:41:5:virtual int SPI_for_RTC::reg_r(uint8_t, uint8_t*, uint16_t)	32	dynamic
+../source/r01device/rtc/SPI_for_RTC.cpp:65:6:virtual void SPI_for_RTC::write_r8(uint8_t, uint8_t)	24	static
+../source/r01device/rtc/SPI_for_RTC.cpp:70:9:virtual uint8_t SPI_for_RTC::read_r8(uint8_t)	24	static
+../source/r01device/rtc/SPI_for_RTC.cpp:75:6:virtual void SPI_for_RTC::bit_op8(uint8_t, uint8_t, uint8_t)	32	static
+../source/r01device/rtc/SPI_for_RTC.cpp:9:1:SPI_for_RTC::SPI_for_RTC(SPI&)	16	static
+../source/r01device/rtc/SPI_for_RTC.cpp:12:6:void SPI_for_RTC::txrx(uint8_t*, int)	24	dynamic

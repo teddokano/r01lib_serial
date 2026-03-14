@@ -1,0 +1,9 @@
+../source/r01device/misc/eeprom/M24C02.cpp:13:1:M24C02::~M24C02()	8	static
+../source/r01device/misc/eeprom/M24C02.cpp:13:1:virtual M24C02::~M24C02()	8	static
+../source/r01device/misc/eeprom/M24C02.cpp:9:1:M24C02::M24C02(I2C&, uint8_t)	8	static
+../source/r01device/misc/eeprom/M24C02.cpp:17:6:void M24C02::begin()	0	static
+../source/r01device/misc/eeprom/M24C02.cpp:21:5:int M24C02::write(int, uint8_t)	32	static
+../source/r01device/misc/eeprom/M24C02.cpp:34:5:int M24C02::write(int, const uint8_t*, int)	48	static
+../source/r01device/misc/eeprom/M24C02.cpp:61:5:int M24C02::wait_write_complete(int)	24	static
+../source/r01device/misc/eeprom/M24C02.cpp:72:9:uint8_t M24C02::read(int)	0	static
+../source/r01device/misc/eeprom/M24C02.cpp:77:5:int M24C02::read(int, uint8_t*, int)	32	static

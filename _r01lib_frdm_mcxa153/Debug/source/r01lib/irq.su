@@ -1,0 +1,4 @@
+../source/r01lib/irq.c:50:6:GPIO0_IRQHandler	8	static
+../source/r01lib/irq.c:54:6:GPIO1_IRQHandler	8	static
+../source/r01lib/irq.c:58:6:GPIO2_IRQHandler	8	static
+../source/r01lib/irq.c:62:6:GPIO3_IRQHandler	8	static

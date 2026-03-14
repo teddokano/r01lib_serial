@@ -1,0 +1,32 @@
+../source/r01device/temp_sensor/TempSensor.cpp:42:9:virtual int16_t LM75B::read_Temp_register()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:47:6:virtual void LM75B::thresholds(float, float)	24	static
+../source/r01device/temp_sensor/TempSensor.cpp:56:6:virtual void LM75B::os_mode(TempSensor::mode)	4	static
+../source/r01device/temp_sensor/TempSensor.cpp:70:6:virtual void P3T1755::thresholds(float, float)	24	static
+../source/r01device/temp_sensor/TempSensor.cpp:83:6:virtual void P3T1085::os_mode(TempSensor::mode)	4	static
+../source/r01device/temp_sensor/TempSensor.cpp:88:6:virtual bool P3T1085::clear()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:100:6:virtual void P3T1035::os_mode(TempSensor::mode)	0	static
+../source/r01device/temp_sensor/TempSensor.cpp:40:1:LM75B::~LM75B()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:63:1:PCT2075::~PCT2075()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:68:1:P3T1755::~P3T1755()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:82:1:P3T1085::~P3T1085()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:96:1:P3T1035::~P3T1035()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:109:1:P3T2030::~P3T2030()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:40:1:virtual LM75B::~LM75B()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:63:1:virtual PCT2075::~PCT2075()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:68:1:virtual P3T1755::~P3T1755()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:82:1:virtual P3T1085::~P3T1085()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:96:1:virtual P3T1035::~P3T1035()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:109:1:virtual P3T2030::~P3T2030()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:26:7:virtual float TempSensor::temp()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:11:1:TempSensor::TempSensor(I2C&, uint8_t)	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:12:1:TempSensor::~TempSensor()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:12:1:virtual TempSensor::~TempSensor()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:15:9:T TempSensor::read() [with T = short int]	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:21:7:T TempSensor::read() [with T = float]	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:31:1:TempSensor::operator float()	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:39:1:LM75B::LM75B(I2C&, uint8_t)	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:62:1:PCT2075::PCT2075(I2C&, uint8_t)	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:67:1:P3T1755::P3T1755(I2C&, uint8_t)	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:81:1:P3T1085::P3T1085(I2C&, uint8_t)	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:95:1:P3T1035::P3T1035(I2C&, uint8_t)	8	static
+../source/r01device/temp_sensor/TempSensor.cpp:108:1:P3T2030::P3T2030(I2C&, uint8_t)	8	static

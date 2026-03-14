@@ -1,0 +1,16 @@
+../source/r01lib/BusInOut.cpp:40:1:BusInOut::~BusInOut()	16	static
+../source/r01lib/BusInOut.cpp:116:6:virtual void BusIn::config(int)	0	static
+../source/r01lib/BusInOut.cpp:49:6:virtual void BusInOut::config(int)	24	static
+../source/r01lib/BusInOut.cpp:65:6:virtual void BusInOut::value(uint8_t)	24	static
+../source/r01lib/BusInOut.cpp:74:9:virtual uint8_t BusInOut::value()	24	static
+../source/r01lib/BusInOut.cpp:114:1:BusIn::~BusIn()	16	static
+../source/r01lib/BusInOut.cpp:136:1:BusOut::~BusOut()	16	static
+../source/r01lib/BusInOut.cpp:40:1:virtual BusInOut::~BusInOut()	16	static
+../source/r01lib/BusInOut.cpp:114:1:virtual BusIn::~BusIn()	16	static
+../source/r01lib/BusInOut.cpp:136:1:virtual BusOut::~BusOut()	16	static
+../source/r01lib/BusInOut.cpp:10:1:BusInOut::BusInOut(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)	72	static
+../source/r01lib/BusInOut.cpp:87:11:BusInOut& BusInOut::operator=(uint8_t)	24	static
+../source/r01lib/BusInOut.cpp:93:11:BusInOut& BusInOut::operator=(BusInOut&)	0	static
+../source/r01lib/BusInOut.cpp:98:1:BusInOut::operator int()	24	static
+../source/r01lib/BusInOut.cpp:103:1:BusIn::BusIn(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)	40	static
+../source/r01lib/BusInOut.cpp:121:1:BusOut::BusOut(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t)	40	static

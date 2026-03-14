@@ -1,0 +1,6 @@
+../source/r01device/rtc/PCF85063TP.cpp:18:1:PCF85063TP::~PCF85063TP()	8	static
+../source/r01device/rtc/PCF85063TP.cpp:18:1:virtual PCF85063TP::~PCF85063TP()	8	static
+/Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/source/r01device/rtc/RTC_NXP.h:600:10:virtual void* PCF85063TP::_ZThn4_N10PCF85063TPD1Ev()	8	static
+/Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/source/r01device/rtc/RTC_NXP.h:600:10:virtual void* PCF85063TP::_ZThn4_N10PCF85063TPD0Ev()	8	static
+../source/r01device/rtc/PCF85063TP.cpp:9:6:void warning()	0	static
+../source/r01device/rtc/PCF85063TP.cpp:14:1:PCF85063TP::PCF85063TP(I2C&, uint8_t)	8	static

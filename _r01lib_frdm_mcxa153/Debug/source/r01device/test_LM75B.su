@@ -1,0 +1,6 @@
+../source/r01device/test_LM75B.cpp:15:1:test_LM75B::~test_LM75B()	8	static
+../source/r01device/test_LM75B.cpp:15:1:virtual test_LM75B::~test_LM75B()	8	static
+../source/r01device/test_LM75B.cpp:11:1:test_LM75B::test_LM75B(I2C&, uint8_t)	8	static
+../source/r01device/test_LM75B.cpp:19:7:float test_LM75B::read()	8	static
+../source/r01device/test_LM75B.cpp:24:6:void test_LM75B::thresholds(float, float)	24	static
+../source/r01device/test_LM75B.cpp:33:6:void test_LM75B::os_mode(mode)	16	static

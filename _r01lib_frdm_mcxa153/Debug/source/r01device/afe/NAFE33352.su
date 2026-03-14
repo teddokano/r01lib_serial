@@ -1,0 +1,54 @@
+../source/r01device/afe/NAFE33352.h:222:16:virtual double NAFE33352_Base::raw2v(int, AFE_base::raw_t)	16	static
+../source/r01device/afe/NAFE33352.cpp:43:1:NAFE33352_Base::DAC::~DAC()	0	static
+../source/r01device/afe/NAFE33352.cpp:338:6:virtual void NAFE33352_Base::open_logical_channel(int, uint16_t, uint16_t, uint16_t, uint16_t)	16	static
+../source/r01device/afe/NAFE33352.cpp:43:1:virtual NAFE33352_Base::DAC::~DAC()	8	static
+../source/r01device/afe/NAFE33352.cpp:22:1:NAFE33352_Base::LogicalChannel::~LogicalChannel()	8	static
+../source/r01device/afe/NAFE33352.cpp:22:1:virtual NAFE33352_Base::LogicalChannel::~LogicalChannel()	8	static
+../source/r01device/afe/NAFE33352.cpp:132:1:NAFE33352_Base::~NAFE33352_Base()	24	static
+../source/r01device/afe/NAFE33352.cpp:392:6:virtual void NAFE33352_Base::read(AFE_base::raw_t*)	0	static
+../source/r01device/afe/NAFE33352.cpp:442:6:virtual void NAFE33352_Base::command(uint16_t)	0	static
+../source/r01device/afe/NAFE33352.cpp:447:6:virtual void NAFE33352_Base::reg(Register16, uint16_t)	0	static
+../source/r01device/afe/NAFE33352.cpp:452:6:virtual void NAFE33352_Base::reg(Register24, uint32_t)	0	static
+../source/r01device/afe/NAFE33352.cpp:457:10:virtual uint16_t NAFE33352_Base::reg(Register16)	0	static
+../source/r01device/afe/NAFE33352.cpp:462:10:virtual uint32_t NAFE33352_Base::reg(Register24)	0	static
+../source/r01device/afe/NAFE33352.cpp:425:6:virtual void NAFE33352_Base::dac_out(double, double, uint8_t)	40	static
+../source/r01device/afe/NAFE33352.cpp:387:9:virtual int32_t NAFE33352_Base::read(int)	0	static
+../source/r01device/afe/NAFE33352.cpp:377:6:virtual void NAFE33352_Base::start_continuous_conversion()	0	static
+../source/r01device/afe/NAFE33352.cpp:372:6:virtual void NAFE33352_Base::start()	0	static
+../source/r01device/afe/NAFE33352.cpp:366:6:virtual void NAFE33352_Base::start(int)	16	static
+../source/r01device/afe/NAFE33352.cpp:152:6:virtual void NAFE33352_Base::reset(bool)	24	static
+../source/r01device/afe/NAFE33352.cpp:136:6:virtual void NAFE33352_Base::boot()	16	static
+../source/r01device/afe/NAFE33352.cpp:397:6:virtual void NAFE33352_Base::read(std::vector<long int>&)	80	static
+../source/r01device/afe/NAFE33352.cpp:405:6:virtual void NAFE33352_Base::read(AFE_base::volt_t*)	104	static
+../source/r01device/afe/NAFE33352.cpp:415:6:virtual void NAFE33352_Base::read(std::vector<double>&)	104	static
+../source/r01device/afe/NAFE33352.cpp:382:6:virtual void NAFE33352_Base::DRDY_by_sequencer_done(bool)	16	static
+../source/r01device/afe/NAFE33352.cpp:498:1:NAFE33352::~NAFE33352()	24	static
+../source/r01device/afe/NAFE33352.cpp:509:1:NAFE33352_UIOM::~NAFE33352_UIOM()	24	static
+../source/r01device/afe/NAFE33352.cpp:132:1:virtual NAFE33352_Base::~NAFE33352_Base()	24	static
+../source/r01device/afe/NAFE33352.cpp:498:1:virtual NAFE33352::~NAFE33352()	24	static
+../source/r01device/afe/NAFE33352.cpp:509:1:virtual NAFE33352_UIOM::~NAFE33352_UIOM()	24	static
+../source/r01device/afe/NAFE33352.cpp:18:1:NAFE33352_Base::LogicalChannel::LogicalChannel()	0	static
+../source/r01device/afe/NAFE33352.cpp:27:6:void NAFE33352_Base::LogicalChannel::configure(const uint16_t (&)[3])	16	static
+../source/r01device/afe/NAFE33352.cpp:33:6:void NAFE33352_Base::LogicalChannel::configure(uint16_t, uint16_t, uint16_t)	16	static
+../source/r01device/afe/NAFE33352.cpp:39:1:NAFE33352_Base::DAC::DAC()	0	static
+../source/r01device/afe/NAFE33352.cpp:47:6:void NAFE33352_Base::DAC::configure(uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t)	40	static
+../source/r01device/afe/NAFE33352.cpp:53:6:void NAFE33352_Base::DAC::configure(const uint16_t (&)[6])	24	static
+../source/r01device/afe/NAFE33352.cpp:58:6:void NAFE33352_Base::DAC::configure(ModeSelect, double)	48	static
+../source/r01device/afe/NAFE33352.cpp:100:6:void NAFE33352_Base::DAC::configure(double)	0	static
+../source/r01device/afe/NAFE33352.cpp:105:6:void NAFE33352_Base::DAC::output(double)	48	static
+../source/r01device/afe/NAFE33352.cpp:110:22:NAFE33352_Base::DAC& NAFE33352_Base::DAC::operator=(double)	48	static
+../source/r01device/afe/NAFE33352.cpp:120:1:NAFE33352_Base::NAFE33352_Base(SPI&, bool, bool, int, int, int, int, int)	32	static
+../source/r01device/afe/NAFE33352.cpp:179:6:void NAFE33352_Base::open_dac_output(const uint16_t (&)[6])	24	static
+../source/r01device/afe/NAFE33352.cpp:261:6:void NAFE33352_Base::channel_info_update(uint16_t)	32	static
+../source/r01device/afe/NAFE33352.cpp:360:6:virtual void NAFE33352_Base::close_logical_channel()	8	static
+../source/r01device/afe/NAFE33352.cpp:344:6:virtual void NAFE33352_Base::enable_logical_channel(int)	16	static
+../source/r01device/afe/NAFE33352.cpp:352:6:virtual void NAFE33352_Base::close_logical_channel(int)	16	static
+../source/r01device/afe/NAFE33352.cpp:286:8:double NAFE33352_Base::calc_delay(int)	40	static
+../source/r01device/afe/NAFE33352.cpp:186:6:virtual void NAFE33352_Base::open_logical_channel(int, const uint16_t (&)[4])	32	static
+../source/r01device/afe/NAFE33352.cpp:430:9:int32_t NAFE33352_Base::dac_code(double, double, uint8_t)	24	static
+../source/r01device/afe/NAFE33352.cpp:467:10:uint64_t NAFE33352_Base::part_number()	24	static
+../source/r01device/afe/NAFE33352.cpp:472:9:uint8_t NAFE33352_Base::revision_number()	8	static
+../source/r01device/afe/NAFE33352.cpp:477:10:uint64_t NAFE33352_Base::serial_number()	24	static
+../source/r01device/afe/NAFE33352.cpp:486:7:float NAFE33352_Base::temperature()	8	static
+../source/r01device/afe/NAFE33352.cpp:493:1:NAFE33352::NAFE33352(SPI&, bool, bool, int, int, int, int, int)	32	static
+../source/r01device/afe/NAFE33352.cpp:504:1:NAFE33352_UIOM::NAFE33352_UIOM(SPI&, bool, bool, int, int, int, int, int)	32	static

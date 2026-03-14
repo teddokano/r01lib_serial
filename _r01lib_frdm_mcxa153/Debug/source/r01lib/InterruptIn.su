@@ -1,0 +1,7 @@
+../source/r01lib/InterruptIn.cpp:98:1:InterruptIn::~InterruptIn()	8	static
+../source/r01lib/InterruptIn.cpp:98:1:virtual InterruptIn::~InterruptIn()	8	static
+../source/r01lib/InterruptIn.cpp:54:6:void irq_handler(int)	24	static
+../source/r01lib/InterruptIn.cpp:93:1:InterruptIn::InterruptIn(uint8_t)	8	static
+../source/r01lib/InterruptIn.cpp:111:6:void InterruptIn::regist(func_ptr, gpio_interrupt_config_t)	8	static
+../source/r01lib/InterruptIn.cpp:100:6:virtual void InterruptIn::rise(func_ptr)	0	static
+../source/r01lib/InterruptIn.cpp:105:6:virtual void InterruptIn::fall(func_ptr)	0	static

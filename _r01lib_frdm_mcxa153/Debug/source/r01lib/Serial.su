@@ -1,0 +1,12 @@
+../source/r01lib/Serial.cpp:114:1:Serial::~Serial()	8	static
+../source/r01lib/Serial.cpp:114:1:virtual Serial::~Serial()	8	static
+../source/r01lib/Serial.cpp:124:6:void Serial::resolve_pins(int, int)	4	static
+../source/r01lib/Serial.cpp:144:6:void Serial::baud(int)	8	static
+../source/r01lib/Serial.cpp:155:5:int Serial::putc(int)	16	static
+../source/r01lib/Serial.cpp:162:5:int Serial::getc()	16	static
+../source/r01lib/Serial.cpp:173:5:)	276	static
+../source/r01lib/Serial.cpp:191:6:bool Serial::readable()	8	static
+../source/r01lib/Serial.cpp:196:6:bool Serial::writable()	8	static
+../source/r01lib/Serial.cpp:205:10:status_t Serial::write(const uint8_t*, size_t)	0	static
+../source/r01lib/Serial.cpp:210:10:status_t Serial::read(uint8_t*, size_t)	0	static
+../source/r01lib/Serial.cpp:76:1:Serial::Serial(int, int, int)	72	static

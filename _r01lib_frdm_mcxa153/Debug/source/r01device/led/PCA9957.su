@@ -1,0 +1,4 @@
+../source/r01device/led/PCA9957.cpp:15:1:PCA9957::~PCA9957()	8	static
+../source/r01device/led/PCA9957.cpp:15:1:virtual PCA9957::~PCA9957()	8	static
+../source/r01device/led/PCA9957.cpp:19:6:virtual void PCA9957::init(float)	24	static
+../source/r01device/led/PCA9957.cpp:10:1:PCA9957::PCA9957(SPI&)	24	static

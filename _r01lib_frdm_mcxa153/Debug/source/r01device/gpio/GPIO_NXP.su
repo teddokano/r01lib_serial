@@ -1,0 +1,49 @@
+../source/r01device/gpio/GPIO_NXP.cpp:312:1:virtual PCAL9722::~PCAL9722()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:39:1:GPIO_base::~GPIO_base()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:208:1:PCA9554::~PCA9554()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:221:1:PCA9555::~PCA9555()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:232:1:PCAL6xxx_base::~PCAL6xxx_base()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:244:1:PCAL6408A::~PCAL6408A()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:258:1:PCAL6416A::~PCAL6416A()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:272:1:PCAL6524::~PCAL6524()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:286:1:PCAL6534::~PCAL6534()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:300:1:PCAL97xx_base::~PCAL97xx_base()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:312:1:PCAL9722::~PCAL9722()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:39:1:virtual GPIO_base::~GPIO_base()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:208:1:virtual PCA9554::~PCA9554()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:221:1:virtual PCA9555::~PCA9555()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:232:1:virtual PCAL6xxx_base::~PCAL6xxx_base()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:244:1:virtual PCAL6408A::~PCAL6408A()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:258:1:virtual PCAL6416A::~PCAL6416A()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:272:1:virtual PCAL6524::~PCAL6524()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:286:1:virtual PCAL6534::~PCAL6534()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:300:1:virtual PCAL97xx_base::~PCAL97xx_base()	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:11:1:GPIO_base::GPIO_base(I2C&, uint8_t, int, const uint8_t*, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:21:1:GPIO_base::GPIO_base(SPI&, uint8_t, int, const uint8_t*, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:31:6:void GPIO_base::init()	0	static
+../source/r01device/gpio/GPIO_NXP.cpp:60:6:void GPIO_base::output(int, uint8_t, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:73:9:uint8_t GPIO_base::input(int)	0	static
+../source/r01device/gpio/GPIO_NXP.cpp:85:6:void GPIO_base::config(int, uint8_t, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:98:6:void GPIO_base::write_port(access_word, const uint8_t*)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:68:6:void GPIO_base::output(const uint8_t*)	0	static
+../source/r01device/gpio/GPIO_NXP.cpp:93:6:void GPIO_base::config(const uint8_t*)	0	static
+../source/r01device/gpio/GPIO_NXP.cpp:109:6:void GPIO_base::write_port16(access_word, const uint16_t*)	32	dynamic
+../source/r01device/gpio/GPIO_NXP.cpp:135:10:uint8_t* GPIO_base::read_port(access_word, uint8_t*)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:78:10:uint8_t* GPIO_base::input(uint8_t*)	8	static
+../source/r01device/gpio/GPIO_NXP.cpp:148:12:uint16_t* GPIO_base::read_port16(access_word, uint16_t*)	32	static
+../source/r01device/gpio/GPIO_NXP.cpp:173:6:void GPIO_base::write_port(access_word, uint8_t, int)	4	static
+../source/r01device/gpio/GPIO_NXP.cpp:178:6:void GPIO_base::write_port16(access_word, uint16_t, int)	4	static
+../source/r01device/gpio/GPIO_NXP.cpp:183:9:uint8_t GPIO_base::read_port(access_word, int)	0	static
+../source/r01device/gpio/GPIO_NXP.cpp:188:10:uint16_t GPIO_base::read_port16(access_word, int)	0	static
+../source/r01device/gpio/GPIO_NXP.cpp:193:6:static void GPIO_base::print_bin(uint8_t)	16	static
+../source/r01device/gpio/GPIO_NXP.cpp:203:1:PCA9554::PCA9554(I2C&, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:216:1:PCA9555::PCA9555(I2C&, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:227:1:PCAL6xxx_base::PCAL6xxx_base(I2C&, uint8_t, int, const uint8_t*, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:239:1:PCAL6408A::PCAL6408A(I2C&, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:253:1:PCAL6416A::PCAL6416A(I2C&, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:267:1:PCAL6524::PCAL6524(I2C&, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:281:1:PCAL6534::PCAL6534(I2C&, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:295:1:PCAL97xx_base::PCAL97xx_base(SPI&, uint8_t, int, const uint8_t*, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:307:1:PCAL9722::PCAL9722(SPI&, uint8_t)	24	static
+../source/r01device/gpio/GPIO_NXP.cpp:43:6:virtual void GPIO_base::begin(board)	48	static
+../source/r01device/gpio/GPIO_NXP.cpp:316:6:virtual void PCAL9722::begin(GPIO_base::board)	32	static

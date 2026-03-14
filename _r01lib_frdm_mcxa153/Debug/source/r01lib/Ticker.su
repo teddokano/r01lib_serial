@@ -1,0 +1,7 @@
+../source/r01lib/Ticker.cpp:31:1:Ticker::~Ticker()	0	static
+../source/r01lib/Ticker.cpp:31:1:virtual Ticker::~Ticker()	8	static
+../source/r01lib/Ticker.cpp:18:6:void _ticker_callback()	0	static
+../source/r01lib/Ticker.cpp:33:6:virtual void Ticker::attach(ticker_callback_fp_t, float)	48	static
+/Applications/MCUXpressoIDE_25.6.136/ide/plugins/com.nxp.mcuxpresso.tools.macosx_25.6.0.202501151204/tools/arm-none-eabi/include/c++/14.2.1/bits/std_function.h:334:11:std::function<void()>::~function()	8	static
+../source/r01lib/Ticker.cpp:25:1:Ticker::Ticker()	16	static
+../source/r01lib/Ticker.cpp:37:1:cpp)	0	static

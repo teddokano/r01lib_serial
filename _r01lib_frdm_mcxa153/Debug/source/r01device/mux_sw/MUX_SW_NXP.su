@@ -1,0 +1,6 @@
+../source/r01device/mux_sw/MUX_SW_NXP.cpp:15:1:PCA9846::~PCA9846()	8	static
+../source/r01device/mux_sw/MUX_SW_NXP.cpp:15:1:virtual PCA9846::~PCA9846()	8	static
+../source/r01device/mux_sw/MUX_SW_NXP.cpp:11:1:PCA9846::PCA9846(I2C&, uint8_t)	8	static
+../source/r01device/mux_sw/MUX_SW_NXP.cpp:19:6:void PCA9846::begin()	0	static
+../source/r01device/mux_sw/MUX_SW_NXP.cpp:23:6:void PCA9846::select(uint8_t)	16	static
+../source/r01device/mux_sw/MUX_SW_NXP.cpp:28:9:uint8_t PCA9846::select()	16	static

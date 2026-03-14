@@ -1,0 +1,73 @@
+../source/r01device/afe/AFE_NXP.h:465:16:virtual double NAFE13388_Base::raw2v(int, AFE_base::raw_t)	16	static
+../source/r01device/afe/AFE_NXP.cpp:57:1:NAFE13388_Base::LogicalChannel::~LogicalChannel()	8	static
+../source/r01device/afe/AFE_NXP.cpp:93:6:virtual void AFE_base::begin()	8	static
+../source/r01device/afe/AFE_NXP.cpp:348:6:virtual void NAFE13388_Base::open_logical_channel(int, uint16_t, uint16_t, uint16_t, uint16_t)	32	static
+/Applications/MCUXpressoIDE_25.6.136/ide/plugins/com.nxp.mcuxpresso.tools.macosx_25.6.0.202501151204/tools/arm-none-eabi/include/c++/14.2.1/bits/std_function.h:288:7:) [with _Res = void; _Functor = AFE_base::init()::<lambda()>; _ArgTypes = {}]	0	static
+/Applications/MCUXpressoIDE_25.6.136/ide/plugins/com.nxp.mcuxpresso.tools.macosx_25.6.0.202501151204/tools/arm-none-eabi/include/c++/14.2.1/bits/std_function.h:288:7:) [with _Res = void; _Functor = AFE_base::use_DRDY_trigger(bool)::<lambda()>; _ArgTypes = {}]	0	static
+../source/r01device/afe/AFE_NXP.cpp:402:6:virtual void NAFE13388_Base::read(AFE_base::raw_t*)	0	static
+../source/r01device/afe/AFE_NXP.cpp:435:6:virtual void NAFE13388_Base::command(uint16_t)	0	static
+../source/r01device/afe/AFE_NXP.cpp:440:6:virtual void NAFE13388_Base::reg(Register16, uint16_t)	0	static
+../source/r01device/afe/AFE_NXP.cpp:445:6:virtual void NAFE13388_Base::reg(Register24, uint32_t)	0	static
+../source/r01device/afe/AFE_NXP.cpp:450:10:virtual uint16_t NAFE13388_Base::reg(Register16)	0	static
+../source/r01device/afe/AFE_NXP.cpp:455:10:virtual uint32_t NAFE13388_Base::reg(Register24)	0	static
+../source/r01device/afe/AFE_NXP.cpp:105:6:static void AFE_base::DRDY_cb()	0	static
+/Applications/MCUXpressoIDE_25.6.136/ide/plugins/com.nxp.mcuxpresso.tools.macosx_25.6.0.202501151204/tools/arm-none-eabi/include/c++/14.2.1/bits/std_function.h:267:7:), _Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Res = void; _Functor = AFE_base::use_DRDY_trigger(bool)::<lambda()>; _ArgTypes = {}]	0	static
+/Applications/MCUXpressoIDE_25.6.136/ide/plugins/com.nxp.mcuxpresso.tools.macosx_25.6.0.202501151204/tools/arm-none-eabi/include/c++/14.2.1/bits/std_function.h:267:7:), _Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Res = void; _Functor = AFE_base::init()::<lambda()>; _ArgTypes = {}]	0	static
+../source/r01device/afe/AFE_NXP.cpp:397:9:virtual int32_t NAFE13388_Base::read(int)	0	static
+../source/r01device/afe/AFE_NXP.cpp:387:6:virtual void NAFE13388_Base::start_continuous_conversion()	0	static
+../source/r01device/afe/AFE_NXP.cpp:382:6:virtual void NAFE13388_Base::start()	0	static
+../source/r01device/afe/AFE_NXP.cpp:376:6:virtual void NAFE13388_Base::start(int)	16	static
+../source/r01device/afe/AFE_NXP.cpp:223:6:virtual void NAFE13388_Base::reset(bool)	24	static
+../source/r01device/afe/AFE_NXP.cpp:215:6:virtual void NAFE13388_Base::boot()	8	static
+/Applications/MCUXpressoIDE_25.6.136/ide/plugins/com.nxp.mcuxpresso.tools.macosx_25.6.0.202501151204/tools/arm-none-eabi/include/c++/14.2.1/bits/std_function.h:334:11:std::function<void()>::~function()	8	static
+../source/r01device/afe/AFE_NXP.cpp:100:6:virtual void AFE_base::set_DRDY_callback(callback_fp_t)	48	static
+../source/r01device/afe/AFE_NXP.cpp:407:6:virtual void NAFE13388_Base::read(std::vector<long int>&)	80	static
+../source/r01device/afe/AFE_NXP.cpp:415:6:virtual void NAFE13388_Base::read(AFE_base::volt_t*)	104	static
+../source/r01device/afe/AFE_NXP.cpp:425:6:virtual void NAFE13388_Base::read(std::vector<double>&)	104	static
+../source/r01device/afe/AFE_NXP.cpp:57:1:virtual NAFE13388_Base::LogicalChannel::~LogicalChannel()	8	static
+../source/r01device/afe/AFE_NXP.cpp:392:6:virtual void NAFE13388_Base::DRDY_by_sequencer_done(bool)	16	static
+../source/r01device/afe/AFE_NXP.cpp:25:6:void LogicalChannel_Base::disable()	0	static
+../source/r01device/afe/AFE_NXP.cpp:31:17:T LogicalChannel_Base::read() [with T = long int]	0	static
+../source/r01device/afe/AFE_NXP.cpp:37:18:T LogicalChannel_Base::read() [with T = double]	16	static
+../source/r01device/afe/AFE_NXP.cpp:43:1:LogicalChannel_Base::operator AFE_base::raw_t()	0	static
+../source/r01device/afe/AFE_NXP.cpp:48:1:LogicalChannel_Base::operator AFE_base::volt_t()	0	static
+../source/r01device/afe/AFE_NXP.cpp:53:1:NAFE13388_Base::LogicalChannel::LogicalChannel()	0	static
+../source/r01device/afe/AFE_NXP.cpp:62:6:void NAFE13388_Base::LogicalChannel::configure(const uint16_t (&)[4])	0	static
+../source/r01device/afe/AFE_NXP.cpp:67:6:void NAFE13388_Base::LogicalChannel::configure(uint16_t, uint16_t, uint16_t, uint16_t)	24	static
+../source/r01device/afe/AFE_NXP.cpp:77:1:AFE_base::AFE_base(SPI&, bool, bool, int, int, int, int, int)	16	static
+../source/r01device/afe/AFE_NXP.cpp:111:6:void AFE_base::default_drdy_cb()	0	static
+../source/r01device/afe/AFE_NXP.cpp:152:5:int AFE_base::bit_count(uint32_t)	0	static
+../source/r01device/afe/AFE_NXP.cpp:165:5:int AFE_base::wait_conversion_complete(double)	16	static
+../source/r01device/afe/AFE_NXP.cpp:117:9:virtual int32_t AFE_base::start_and_read(int)	24	static
+../source/r01device/afe/AFE_NXP.cpp:128:6:virtual void AFE_base::start_and_read(raw_t*)	24	static
+../source/r01device/afe/AFE_NXP.cpp:138:6:virtual void AFE_base::start_and_read(std::vector<long int>&)	24	static
+../source/r01device/afe/AFE_NXP.cpp:188:6:void AFE_base::use_DRDY_trigger(bool)	64	static
+../source/r01device/afe/AFE_NXP.cpp:201:1:NAFE13388_Base::NAFE13388_Base(SPI&, bool, bool, int, int, int, int)	32	static
+../source/r01device/afe/AFE_NXP.cpp:272:6:void NAFE13388_Base::channel_info_update(uint16_t)	32	static
+../source/r01device/afe/AFE_NXP.cpp:370:6:virtual void NAFE13388_Base::close_logical_channel()	8	static
+../source/r01device/afe/AFE_NXP.cpp:354:6:virtual void NAFE13388_Base::enable_logical_channel(int)	16	static
+../source/r01device/afe/AFE_NXP.cpp:362:6:virtual void NAFE13388_Base::close_logical_channel(int)	16	static
+../source/r01device/afe/AFE_NXP.cpp:20:6:void LogicalChannel_Base::enable()	16	static
+../source/r01device/afe/AFE_NXP.cpp:297:8:double NAFE13388_Base::calc_delay(int)	40	static
+../source/r01device/afe/AFE_NXP.cpp:249:6:virtual void NAFE13388_Base::open_logical_channel(int, const uint16_t (&)[4])	32	static
+../source/r01device/afe/AFE_NXP.cpp:460:10:uint32_t NAFE13388_Base::part_number()	16	static
+../source/r01device/afe/AFE_NXP.cpp:465:9:uint8_t NAFE13388_Base::revision_number()	8	static
+../source/r01device/afe/AFE_NXP.cpp:470:10:uint64_t NAFE13388_Base::serial_number()	24	static
+../source/r01device/afe/AFE_NXP.cpp:479:7:float NAFE13388_Base::temperature()	8	static
+../source/r01device/afe/AFE_NXP.cpp:484:6:void NAFE13388_Base::gain_offset_coeff(const ref_points&)	48	static
+../source/r01device/afe/AFE_NXP.cpp:516:5:int NAFE13388_Base::self_calibrate(int, int, int, double, bool)	88	static
+../source/r01device/afe/AFE_NXP.cpp:620:6:void NAFE13388_Base::blink_leds()	0	static
+../source/r01device/afe/AFE_NXP.cpp:628:1:NAFE13388::NAFE13388(SPI&, bool, bool, int, int, int, int)	32	static
+../source/r01device/afe/AFE_NXP.cpp:639:1:NAFE13388_UIM::NAFE13388_UIM(SPI&, bool, bool, int, int, int, int)	32	static
+/Applications/MCUXpressoIDE_25.6.136/ide/plugins/com.nxp.mcuxpresso.tools.macosx_25.6.0.202501151204/tools/arm-none-eabi/include/c++/14.2.1/bits/vector.tcc:805:5:constexpr void std::vector<_Tp, _Alloc>::_M_default_append(size_type) [with _Tp = short unsigned int; _Alloc = std::allocator<short unsigned int>]	32	static
+../source/r01device/afe/AFE_NXP.cpp:648:6:void NAFE13388_UIM::blink_leds()	56	static
+../source/r01device/afe/AFE_NXP.cpp:674:1:cpp)	0	static
+../source/r01device/afe/AFE_NXP.cpp:82:1:AFE_base::~AFE_base()	8	static
+../source/r01device/afe/AFE_NXP.cpp:82:1:virtual AFE_base::~AFE_base()	8	static
+../source/r01device/afe/AFE_NXP.cpp:211:1:NAFE13388_Base::~NAFE13388_Base()	48	static
+../source/r01device/afe/AFE_NXP.cpp:211:1:virtual NAFE13388_Base::~NAFE13388_Base()	8	static
+../source/r01device/afe/AFE_NXP.cpp:633:1:NAFE13388::~NAFE13388()	8	static
+../source/r01device/afe/AFE_NXP.cpp:633:1:virtual NAFE13388::~NAFE13388()	8	static
+../source/r01device/afe/AFE_NXP.cpp:644:1:NAFE13388_UIM::~NAFE13388_UIM()	8	static
+../source/r01device/afe/AFE_NXP.cpp:644:1:virtual NAFE13388_UIM::~NAFE13388_UIM()	8	static
+../source/r01device/afe/AFE_NXP.cpp:86:6:virtual void AFE_base::init()	64	static

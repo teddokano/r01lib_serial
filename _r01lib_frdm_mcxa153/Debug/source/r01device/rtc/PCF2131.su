@@ -1,0 +1,17 @@
+../source/r01device/rtc/PCF2131.cpp:29:6:virtual bool PCF2131::oscillator_stop()	8	static
+../source/r01device/rtc/PCF2131.cpp:93:6:virtual void PCF2131::alarm_clear()	4	static
+../source/r01device/rtc/PCF2131.cpp:98:6:virtual void PCF2131::alarm_disable()	4	static
+../source/r01device/rtc/PCF2131.cpp:19:1:PCF2131::~PCF2131()	8	static
+../source/r01device/rtc/PCF2131.cpp:34:8:virtual time_t PCF2131::rtc_time()	56	static
+../source/r01device/rtc/PCF2131.cpp:53:6:virtual void PCF2131::set(tm*)	32	static
+../source/r01device/rtc/PCF2131.cpp:19:1:virtual PCF2131::~PCF2131()	8	static
+../source/r01device/rtc/PCF2131.cpp:9:1:PCF2131::PCF2131(I2C&, uint8_t)	16	static
+../source/r01device/rtc/PCF2131.cpp:14:1:PCF2131::PCF2131(SPI&)	16	static
+../source/r01device/rtc/PCF2131.cpp:85:6:void PCF2131::alarm(RTC_NXP::alarm_setting, int, int)	16	static
+../source/r01device/rtc/PCF2131.cpp:80:6:virtual void PCF2131::alarm(RTC_NXP::alarm_setting, int)	0	static
+../source/r01device/rtc/PCF2131.cpp:103:6:void PCF2131::timestamp(int, timestanp_setting, int)	24	static
+../source/r01device/rtc/PCF2131.cpp:118:8:time_t PCF2131::timestamp(int)	56	static
+../source/r01device/rtc/PCF2131.cpp:151:9:uint8_t PCF2131::int_clear(uint8_t*)	16	static
+../source/r01device/rtc/PCF2131.cpp:143:9:virtual uint8_t PCF2131::int_clear()	16	static
+../source/r01device/rtc/PCF2131.cpp:23:6:virtual void PCF2131::begin()	16	static
+../source/r01device/rtc/PCF2131.cpp:167:6:void PCF2131::periodic_interrupt_enable(periodic_int_select, int)	16	static

@@ -1,0 +1,3 @@
+../source/r01lib/obj.cpp:29:1:Obj::~Obj()	0	static
+../source/r01lib/obj.cpp:29:1:virtual Obj::~Obj()	8	static
+../source/r01lib/obj.cpp:13:1:Obj::Obj(bool)	16	static

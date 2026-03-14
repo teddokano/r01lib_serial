@@ -1,0 +1,20 @@
+../source/r01lib/io.cpp:493:1:DigitalInOut::~DigitalInOut()	8	static
+../source/r01lib/io.cpp:572:1:DigitalOut::~DigitalOut()	8	static
+../source/r01lib/io.cpp:579:1:DigitalIn::~DigitalIn()	8	static
+../source/r01lib/io.cpp:493:1:virtual DigitalInOut::~DigitalInOut()	8	static
+../source/r01lib/io.cpp:572:1:virtual DigitalOut::~DigitalOut()	8	static
+../source/r01lib/io.cpp:579:1:virtual DigitalIn::~DigitalIn()	8	static
+../source/r01lib/io.cpp:495:6:void DigitalInOut::value(bool)	4	static
+../source/r01lib/io.cpp:506:6:bool DigitalInOut::value()	0	static
+../source/r01lib/io.cpp:517:6:void DigitalInOut::output()	16	static
+../source/r01lib/io.cpp:523:6:void DigitalInOut::input()	16	static
+../source/r01lib/io.cpp:529:6:void DigitalInOut::direction(bool)	16	static
+../source/r01lib/io.cpp:535:6:void DigitalInOut::pin_mux(int)	0	static
+../source/r01lib/io.cpp:540:6:void DigitalInOut::mode(int)	4	static
+../source/r01lib/io.cpp:475:1:DigitalInOut::DigitalInOut(uint8_t, bool, bool, int)	32	static
+../source/r01lib/io.cpp:546:10:uint32_t DigitalInOut::mode()	0	static
+../source/r01lib/io.cpp:551:15:DigitalInOut& DigitalInOut::operator=(bool)	4	static
+../source/r01lib/io.cpp:557:15:DigitalInOut& DigitalInOut::operator=(DigitalInOut&)	0	static
+../source/r01lib/io.cpp:562:1:DigitalInOut::operator bool()	0	static
+../source/r01lib/io.cpp:567:1:DigitalOut::DigitalOut(uint8_t, bool, int)	16	static
+../source/r01lib/io.cpp:574:1:DigitalIn::DigitalIn(uint8_t, int)	16	static

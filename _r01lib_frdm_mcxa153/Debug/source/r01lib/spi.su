@@ -1,0 +1,6 @@
+../source/r01lib/spi.cpp:215:6:virtual void SPI::frequency(uint32_t)	8	static
+../source/r01lib/spi.cpp:227:6:virtual void SPI::mode(uint8_t)	8	static
+../source/r01lib/spi.cpp:210:1:SPI::~SPI()	8	static
+../source/r01lib/spi.cpp:236:10:virtual status_t SPI::write(uint8_t*, uint8_t*, int)	24	static
+../source/r01lib/spi.cpp:210:1:virtual SPI::~SPI()	8	static
+../source/r01lib/spi.cpp:141:1:SPI::SPI(int, int, int, int)	120	static

@@ -1,0 +1,3 @@
+../source/r01device/led/LED.cpp:9:1:LED::LED(LEDDriver&, int)	0	static
+../source/r01device/led/LED.cpp:11:7:float LED::operator=(float)	8	static
+../source/r01device/led/LED.cpp:17:1:_LED::_LED(LEDDriver&, int)	0	static

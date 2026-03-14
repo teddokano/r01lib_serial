@@ -1,0 +1,22 @@
+../source/r01device/misc/potentiometer/AD5161.cpp:10:1:AD5161_base::~AD5161_base()	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:11:6:virtual void AD5161_base::begin()	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:47:1:AD5161_SPI::~AD5161_SPI()	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:10:1:virtual AD5161_base::~AD5161_base()	8	static
+../source/r01device/misc/potentiometer/AD5161.cpp:47:1:virtual AD5161_SPI::~AD5161_SPI()	8	static
+../source/r01device/misc/potentiometer/AD5161.cpp:14:1:AD5161_I2C::~AD5161_I2C()	8	static
+../source/r01device/misc/potentiometer/AD5161.cpp:14:1:virtual AD5161_I2C::~AD5161_I2C()	8	static
+/Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/source/r01device/misc/potentiometer/AD5161.h:45:10:virtual void* AD5161_I2C::_ZThn8_N10AD5161_I2CD1Ev()	8	static
+/Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/source/r01device/misc/potentiometer/AD5161.h:45:10:virtual void* AD5161_I2C::_ZThn8_N10AD5161_I2CD0Ev()	8	static
+../source/r01device/misc/potentiometer/AD5161.cpp:9:1:AD5161_base::AD5161_base()	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:13:1:AD5161_I2C::AD5161_I2C(I2C&, uint8_t)	16	static
+../source/r01device/misc/potentiometer/AD5161.cpp:16:6:void AD5161_I2C::value(uint8_t)	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:21:9:uint8_t AD5161_I2C::value()	16	static
+../source/r01device/misc/potentiometer/AD5161.cpp:29:13:AD5161_I2C& AD5161_I2C::operator=(uint8_t)	8	static
+../source/r01device/misc/potentiometer/AD5161.cpp:35:13:AD5161_I2C& AD5161_I2C::operator=(AD5161_I2C&)	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:40:1:AD5161_I2C::operator int()	16	static
+../source/r01device/misc/potentiometer/AD5161.cpp:46:1:AD5161_SPI::AD5161_SPI(SPI&)	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:49:9:uint8_t AD5161_SPI::value(uint8_t)	32	static
+../source/r01device/misc/potentiometer/AD5161.cpp:59:9:uint8_t AD5161_SPI::value()	24	static
+../source/r01device/misc/potentiometer/AD5161.cpp:64:13:AD5161_SPI& AD5161_SPI::operator=(uint8_t)	24	static
+../source/r01device/misc/potentiometer/AD5161.cpp:70:13:AD5161_SPI& AD5161_SPI::operator=(AD5161_SPI&)	0	static
+../source/r01device/misc/potentiometer/AD5161.cpp:75:1:AD5161_SPI::operator int()	24	static
