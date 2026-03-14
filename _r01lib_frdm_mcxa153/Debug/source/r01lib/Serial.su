@@ -1,12 +1,18 @@
-../source/r01lib/Serial.cpp:114:1:Serial::~Serial()	8	static
-../source/r01lib/Serial.cpp:114:1:virtual Serial::~Serial()	8	static
-../source/r01lib/Serial.cpp:124:6:void Serial::resolve_pins(int, int)	4	static
-../source/r01lib/Serial.cpp:144:6:void Serial::baud(int)	8	static
-../source/r01lib/Serial.cpp:155:5:int Serial::putc(int)	16	static
-../source/r01lib/Serial.cpp:162:5:int Serial::getc()	16	static
-../source/r01lib/Serial.cpp:173:5:)	276	static
-../source/r01lib/Serial.cpp:191:6:bool Serial::readable()	8	static
-../source/r01lib/Serial.cpp:196:6:bool Serial::writable()	8	static
-../source/r01lib/Serial.cpp:205:10:status_t Serial::write(const uint8_t*, size_t)	0	static
-../source/r01lib/Serial.cpp:210:10:status_t Serial::read(uint8_t*, size_t)	0	static
-../source/r01lib/Serial.cpp:76:1:Serial::Serial(int, int, int)	72	static
+../source/r01lib/Serial.cpp:149:1:Serial::~Serial()	8	static
+../source/r01lib/Serial.cpp:149:1:virtual Serial::~Serial()	8	static
+../source/r01lib/Serial.cpp:167:6:void Serial::resolve_pins(int, int)	12	static
+../source/r01lib/Serial.cpp:190:6:void Serial::update_irq_enables()	8	static
+../source/r01lib/Serial.cpp:223:6:void Serial::attach(func_ptr, IrqType)	0	static
+../source/r01lib/Serial.cpp:237:6:void Serial::_irq_handler()	16	static
+../source/r01lib/Serial.cpp:52:7:void LPUART0_IRQHandler()	0	static
+../source/r01lib/Serial.cpp:59:7:void LPUART1_IRQHandler()	0	static
+../source/r01lib/Serial.cpp:66:7:void LPUART2_IRQHandler()	0	static
+../source/r01lib/Serial.cpp:273:6:void Serial::baud(int)	16	static
+../source/r01lib/Serial.cpp:296:5:int Serial::putc(int)	16	static
+../source/r01lib/Serial.cpp:303:5:int Serial::getc()	16	static
+../source/r01lib/Serial.cpp:328:5:)	276	static
+../source/r01lib/Serial.cpp:346:6:bool Serial::readable()	8	static
+../source/r01lib/Serial.cpp:354:6:bool Serial::writable()	8	static
+../source/r01lib/Serial.cpp:363:10:status_t Serial::write(const uint8_t*, size_t)	0	static
+../source/r01lib/Serial.cpp:368:10:status_t Serial::read(uint8_t*, size_t)	0	static
+../source/r01lib/Serial.cpp:103:1:Serial::Serial(int, int, int)	80	static

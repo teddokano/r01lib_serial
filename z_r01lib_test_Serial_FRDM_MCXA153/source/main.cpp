@@ -20,23 +20,19 @@
 
 #include "r01lib.h"
 
-// LPUART0: P0_3 = TX, P0_2 = RX
-Serial uart(P0_3, P0_2, 115200);
+//Serial		uart( USBTX, USBRX, 115200);
+Serial		uart( D1, D0, 115200);
+DigitalOut	led(GREEN);
 
 int main(void)
 {
-    // Single message
     uart.printf("Hello, world!\r\n");
-
-    // Blink LED and echo received characters to confirm RX also works
-    DigitalOut led(GREEN);
 
     while (true)
     {
-
-        if (uart.readable())
+        if ( uart.readable() )
         {
-            int c = uart.getc();
+            int	c	= uart.getc();
             uart.putc(c);   // echo back
             led = !led;
         }

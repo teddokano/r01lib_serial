@@ -16,10 +16,10 @@ source/r01lib/Serial.o source/r01lib/Serial.d: \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_clock.h \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_reset.h \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_port.h \
+ /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_common.h \
  ../source/r01lib/io.h \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/pin_mux.h \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/clock_config.h \
- /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_common.h \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/board.h \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/clock_config.h \
  /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_gpio.h \
@@ -53,10 +53,10 @@ source/r01lib/Serial.o source/r01lib/Serial.d: \
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_clock.h:
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_reset.h:
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_port.h:
+/Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_common.h:
 ../source/r01lib/io.h:
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/pin_mux.h:
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/clock_config.h:
-/Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_common.h:
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/board.h:
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/board/clock_config.h:
 /Users/tedd/dev/mcuxpresso/r01lib_serial/_r01lib_frdm_mcxa153/drivers/fsl_gpio.h:

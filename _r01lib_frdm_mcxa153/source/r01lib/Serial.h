@@ -22,6 +22,9 @@ extern "C" {
 #include "obj.h"
 #include "io.h"
 
+/** Callback function pointer type (same as InterruptIn / Mbed style) */
+typedef void (*func_ptr)( void );
+
 /** Serial class
  *
  *  @class Serial
@@ -30,105 +33,146 @@ extern "C" {
  *
  *  Supported pin pairs on FRDM-MCXA153 (CPU_MCXA153VLH):
  *
- *    TX=MB_TX (P3_15), RX=MB_RX (P3_14)  ->  LPUART2  Alt2  (MikroBus)
- *    TX=D1    (P1_5),  RX=D0    (P1_4)   ->  LPUART2  Alt4  (Arduino D0/D1)
- *    TX=D19   (P1_9),  RX=D18   (P1_8)   ->  LPUART1  Alt2  (Arduino D18/D19)
- *
- *  LPUART0 (P0_2/P0_3) is reserved for the debug console and cannot be used.
+ *    TX=P0_3,  RX=P0_2   ->  LPUART0  Alt2  (semihost mode only)
+ *    TX=MB_TX, RX=MB_RX  ->  LPUART2  Alt2  (MikroBus)
+ *    TX=D1,    RX=D0     ->  LPUART2  Alt4  (Arduino D0/D1)
+ *    TX=D19,   RX=D18    ->  LPUART1  Alt2  (Arduino D18/D19)
  *
  *  Usage example:
- *    #include "r01lib.h"
- *    #include "Serial.h"
+ *    Serial uart(MB_TX, MB_RX, 115200);
  *
- *    Serial uart(MB_TX, MB_RX);           // 9600 baud default
- *    Serial uart(MB_TX, MB_RX, 115200);   // specify baud rate
+ *    // polling
+ *    uart.printf("Hello\r\n");
+ *    if (uart.readable()) { int c = uart.getc(); }
  *
- *    uart.printf("Hello %d\r\n", 42);
- *    uart.putc('A');
- *    int c = uart.getc();                 // blocking receive
- *    if (uart.readable()) { ... }
+ *    // interrupt-driven RX
+ *    void on_rx() { int c = uart.getc(); uart.putc(c); }
+ *    uart.attach(on_rx, Serial::RxIrq);
  */
 
 class Serial : public Obj
 {
 public:
-    /** Create a Serial instance
-     *
-     * @param tx    TX pin number (use pin name defines: MB_TX, D1, D19, ...)
-     * @param rx    RX pin number (use pin name defines: MB_RX, D0, D18, ...)
-     * @param baud  baud rate in bps (default: 9600)
-     */
-    Serial( int tx, int rx, int baud = 9600 );
+	/** IrqType: select which interrupt event to attach a callback to */
+	enum IrqType {
+		RxIrq = 0,  ///< Called each time a character is received
+		TxIrq = 1,  ///< Called when the TX register becomes empty
+	};
 
-    /** Destructor - releases LPUART peripheral */
-    virtual ~Serial();
+	/** RX ring buffer size (bytes) — must be a power of 2 */
+	static constexpr size_t RX_RING_BUF_SIZE = 64U;
 
-    /** Change baud rate
-     *
-     * @param baudrate  new baud rate in bps
-     */
-    void baud( int baudrate );
+	/** Create a Serial instance
+	 *
+	 * @param tx    TX pin number (pin name defines: P0_3, MB_TX, D1, D19 ...)
+	 * @param rx    RX pin number (pin name defines: P0_2, MB_RX, D0, D18 ...)
+	 * @param baud  baud rate in bps (default: 9600)
+	 */
+	Serial( int tx, int rx, int baud = 9600 );
 
-    /** Send a single character (blocking)
-     *
-     * @param c  character to send (as int, Mbed compatible)
-     * @return   the character sent
-     */
-    int putc( int c );
+	/** Destructor */
+	virtual ~Serial();
 
-    /** Receive a single character (blocking)
-     *
-     * @return  received character
-     */
-    int getc( void );
+	/** Change baud rate
+	 *
+	 * @param baudrate  new baud rate in bps
+	 */
+	void baud( int baudrate );
 
-    /** Printf-style formatted output (blocking)
-     *
-     * @param fmt  printf format string
-     * @return     number of characters written
-     */
-    int printf( const char *fmt, ... );
+	/** Send a single character (blocking)
+	 *
+	 * @param c  character to send
+	 * @return   the character sent
+	 */
+	int putc( int c );
 
-    /** Check if at least one byte is available to read (non-blocking)
-     *
-     * @return  true if data is ready in the receive register
-     */
-    bool readable( void );
+	/** Receive a single character
+	 *  Blocking in polling mode (no attach).
+	 *  Non-blocking after attach(RxIrq): returns -1 when the ring buffer
+	 *  is empty.
+	 *
+	 * @return  received character, or -1 if no data (IRQ mode)
+	 */
+	int getc( void );
 
-    /** Check if the transmit register is empty and ready for next byte (non-blocking)
-     *
-     * @return  true if transmitter is ready
-     */
-    bool writable( void );
+	/** Printf-style formatted output (blocking)
+	 *
+	 * @param fmt  printf format string
+	 * @return     number of characters written
+	 */
+	int printf( const char *fmt, ... );
 
-    /** Write a buffer of bytes (blocking)
-     *
-     * @param data    pointer to data buffer
-     * @param length  number of bytes to write
-     * @return        kStatus_Success on success
-     */
-    status_t write( const uint8_t *data, size_t length );
+	/** Check if at least one byte is available to read
+	 *
+	 * @return  true if data is ready
+	 */
+	bool readable( void );
 
-    /** Read a buffer of bytes (blocking)
-     *
-     * @param data    pointer to receive buffer
-     * @param length  number of bytes to read
-     * @return        kStatus_Success on success
-     */
-    status_t read( uint8_t *data, size_t length );
+	/** Check if the transmitter is ready for the next byte
+	 *
+	 * @return  true if TX register is empty
+	 */
+	bool writable( void );
+
+	/** Write a buffer of bytes (blocking)
+	 *
+	 * @param data    pointer to data buffer
+	 * @param length  number of bytes
+	 * @return        kStatus_Success on success
+	 */
+	status_t write( const uint8_t *data, size_t length );
+
+	/** Read a buffer of bytes (blocking)
+	 *
+	 * @param data    pointer to receive buffer
+	 * @param length  number of bytes to read
+	 * @return        kStatus_Success on success
+	 */
+	status_t read( uint8_t *data, size_t length );
+
+	/** Attach a callback for RX or TX interrupt events (Mbed compatible)
+	 *
+	 *  RxIrq: callback invoked each time a byte is received.
+	 *         getc() becomes non-blocking (returns -1 when buffer empty).
+	 *  TxIrq: callback invoked each time the TX register becomes empty.
+	 *
+	 *  Pass nullptr to detach.
+	 *
+	 * @param callback  function pointer, or nullptr to detach
+	 * @param type      RxIrq or TxIrq (default: RxIrq)
+	 */
+	void attach( func_ptr callback, IrqType type = RxIrq );
+
+	// -----------------------------------------------------------------------
+	//  Internal: called from global LPUART IRQ handlers — do not call directly
+	// -----------------------------------------------------------------------
+	void _irq_handler( void );
 
 private:
-    /** Resolve TX/RX pin combination to LPUART hardware resources */
-    void resolve_pins( int tx, int rx );
+	void resolve_pins( int tx, int rx );
+	void update_irq_enables( void );
 
-    LPUART_Type        *_base;      ///< LPUART peripheral base pointer
-    lpuart_config_t     _config;    ///< LPUART SDK configuration struct
-    uint32_t            _clk_freq;  ///< Source clock frequency [Hz]
-    uint32_t            _instance;  ///< LPUART instance index (0/1/2)
-    port_mux_t          _mux;       ///< PORT pin mux value for TX and RX
-    reset_ip_name_t     _rst;       ///< Reset control identifier
-    int                 _tx_pin;    ///< TX pin number (r01lib enum)
-    int                 _rx_pin;    ///< RX pin number (r01lib enum)
+	// ---- hardware ----
+	LPUART_Type        *_base;
+	lpuart_config_t     _config;
+	uint32_t            _clk_freq;
+	uint32_t            _instance;
+	port_mux_t          _mux;
+	reset_ip_name_t     _rst;
+	IRQn_Type           _irqn;
+	clock_attach_id_t   _clk_attach; ///< clock source selector
+	clock_div_name_t    _clk_div;    ///< clock divider name
+	int                 _tx_pin;
+	int                 _rx_pin;
+
+	// ---- software ring buffer (RX) ----
+	volatile uint8_t    _rx_buf[ RX_RING_BUF_SIZE ];
+	volatile uint16_t   _rx_head;   ///< written by ISR
+	volatile uint16_t   _rx_tail;   ///< read  by getc()
+
+	// ---- user callbacks ----
+	func_ptr            _rx_callback;
+	func_ptr            _tx_callback;
 };
 
 #endif // R01LIB_SERIAL_H
