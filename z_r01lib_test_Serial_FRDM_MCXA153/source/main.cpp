@@ -20,8 +20,8 @@
 
 #include "r01lib.h"
 
-Serial		uart( USBTX, USBRX, 115200);
-//Serial		uart( D1, D0, 115200);
+//Serial		uart( USBTX, USBRX, 115200);
+Serial		uart( D1, D0, 115200);
 DigitalOut	led(GREEN);
 
 int main(void)

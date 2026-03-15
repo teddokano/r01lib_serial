@@ -41,7 +41,7 @@ DigitalOut led( GREEN );
 
 // ---- RX callbacks ----------------------------------------------------------
 
-// PC → Target: byte received from PC, forward to uart
+// PC → Target: byte received from PC, forward to uartx
 void on_pc_rx( void )
 {
     int c = pc.getc();

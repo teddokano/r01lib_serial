@@ -20,7 +20,8 @@
 
 #include "r01lib.h"
 
-Serial		uart( USBTX, USBRX, 115200 );
+//Serial		uart( USBTX, USBRX, 115200 );
+Serial  	uart( D1,    D0,    115200 );   // Target
 DigitalOut	led( GREEN );
 
 // RX interrupt callback: echo each received character back
