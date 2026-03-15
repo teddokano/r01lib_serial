@@ -122,6 +122,9 @@ void init_mcu( void )
 #elif	CPU_MCXA156VLL
 	
 	RESET_ReleasePeripheralReset( kLPUART0_RST_SHIFT_RSTn);
+	RESET_ReleasePeripheralReset( kLPUART1_RST_SHIFT_RSTn);
+	RESET_ReleasePeripheralReset( kLPUART2_RST_SHIFT_RSTn);
+
 	RESET_ReleasePeripheralReset( kPORT0_RST_SHIFT_RSTn );
 	RESET_ReleasePeripheralReset( kPORT1_RST_SHIFT_RSTn );
 	RESET_ReleasePeripheralReset( kGPIO1_RST_SHIFT_RSTn );
@@ -149,7 +152,7 @@ void init_mcu( void )
 	CLOCK_EnableClock( kCLOCK_GateGPIO2 );
 	CLOCK_EnableClock( kCLOCK_GateGPIO3 );
 	CLOCK_EnableClock( kCLOCK_GateGPIO4 );
-
+	
 	RESET_PeripheralReset( kUTICK0_RST_SHIFT_RSTn );
 	
 	BOARD_InitPins();

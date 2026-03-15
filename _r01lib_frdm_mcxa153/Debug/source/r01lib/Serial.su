@@ -1,24 +1,24 @@
-../source/r01lib/Serial.cpp:275:1:Serial::~Serial()	8	static
-../source/r01lib/Serial.cpp:275:1:virtual Serial::~Serial()	8	static
-../source/r01lib/Serial.cpp:82:6:void Serial::resolve_pins(int, int)	12	static
-../source/r01lib/Serial.cpp:101:10:void Serial::_setup_clock()	8	static
-../source/r01lib/Serial.cpp:102:10:uint32_t Serial::_get_clk_freq()	0	static
-../source/r01lib/Serial.cpp:103:10:void Serial::_release_reset()	0	static
-../source/r01lib/Serial.cpp:104:10:void Serial::_register_instance()	0	static
-../source/r01lib/Serial.cpp:105:10:void Serial::_unregister_instance()	0	static
-../source/r01lib/Serial.cpp:293:6:void Serial::tx_enqueue(uint8_t)	0	static
-../source/r01lib/Serial.cpp:307:6:void Serial::update_irq_enables()	8	static
-../source/r01lib/Serial.cpp:326:6:void Serial::attach(func_ptr, IrqType)	0	static
-../source/r01lib/Serial.cpp:339:6:void Serial::_irq_handler()	16	static
-../source/r01lib/Serial.cpp:58:10:void LPUART0_IRQHandler()	0	static
-../source/r01lib/Serial.cpp:59:10:void LPUART1_IRQHandler()	0	static
-../source/r01lib/Serial.cpp:60:10:void LPUART2_IRQHandler()	0	static
-../source/r01lib/Serial.cpp:381:6:void Serial::baud(int)	16	static
-../source/r01lib/Serial.cpp:397:5:int Serial::putc(int)	8	static
-../source/r01lib/Serial.cpp:403:5:int Serial::getc()	16	static
-../source/r01lib/Serial.cpp:422:5:)	284	static
-../source/r01lib/Serial.cpp:436:6:bool Serial::readable()	8	static
-../source/r01lib/Serial.cpp:444:6:bool Serial::writable()	0	static
-../source/r01lib/Serial.cpp:450:10:status_t Serial::write(const uint8_t*, size_t)	16	static
-../source/r01lib/Serial.cpp:458:10:status_t Serial::read(uint8_t*, size_t)	0	static
-../source/r01lib/Serial.cpp:235:1:Serial::Serial(int, int, int)	80	static
+../source/r01lib/Serial.cpp:381:1:Serial::~Serial()	8	static
+../source/r01lib/Serial.cpp:381:1:virtual Serial::~Serial()	8	static
+../source/r01lib/Serial.cpp:84:6:void Serial::resolve_pins(int, int)	12	static
+../source/r01lib/Serial.cpp:103:10:void Serial::_setup_clock()	8	static
+../source/r01lib/Serial.cpp:104:10:uint32_t Serial::_get_clk_freq()	0	static
+../source/r01lib/Serial.cpp:105:10:void Serial::_release_reset()	0	static
+../source/r01lib/Serial.cpp:106:10:void Serial::_register_instance()	0	static
+../source/r01lib/Serial.cpp:107:10:void Serial::_unregister_instance()	0	static
+../source/r01lib/Serial.cpp:399:6:void Serial::tx_enqueue(uint8_t)	0	static
+../source/r01lib/Serial.cpp:413:6:void Serial::update_irq_enables()	8	static
+../source/r01lib/Serial.cpp:432:6:void Serial::attach(func_ptr, IrqType)	0	static
+../source/r01lib/Serial.cpp:445:6:void Serial::_irq_handler()	16	static
+../source/r01lib/Serial.cpp:60:10:void LPUART0_IRQHandler()	0	static
+../source/r01lib/Serial.cpp:61:10:void LPUART1_IRQHandler()	0	static
+../source/r01lib/Serial.cpp:62:10:void LPUART2_IRQHandler()	0	static
+../source/r01lib/Serial.cpp:487:6:void Serial::baud(int)	16	static
+../source/r01lib/Serial.cpp:503:5:int Serial::putc(int)	8	static
+../source/r01lib/Serial.cpp:509:5:int Serial::getc()	16	static
+../source/r01lib/Serial.cpp:528:5:)	284	static
+../source/r01lib/Serial.cpp:542:6:bool Serial::readable()	8	static
+../source/r01lib/Serial.cpp:550:6:bool Serial::writable()	0	static
+../source/r01lib/Serial.cpp:556:10:status_t Serial::write(const uint8_t*, size_t)	16	static
+../source/r01lib/Serial.cpp:564:10:status_t Serial::read(uint8_t*, size_t)	0	static
+../source/r01lib/Serial.cpp:341:1:Serial::Serial(int, int, int)	80	static
