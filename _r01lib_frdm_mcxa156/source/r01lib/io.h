@@ -749,6 +749,9 @@ enum {
 	#define	ARD_MISO	SPI_MISO
 	#define	ARD_SCK		SPI_SCLK
 
+	#define	USBTX		D1
+	#define	USBRX		D0
+
 	#define	PIN_LED_OFF	true
 	#define	PIN_LED_ON	false
 

@@ -2,7 +2,7 @@
 
 //Serial		uart( USBTX, USBRX, 115200);
 //Serial		uart( D1, D0, 115200);
-//Serial		uart( MB_TX, MB_RX, 115200);
+Serial		uart( MB_TX, MB_RX, 115200);
 DigitalOut	led(GREEN);
 
 int main(void)
@@ -23,8 +23,6 @@ int main(void)
 	LPUART_WriteBlocking(LPUART1, (uint8_t*)"TEST\r\n", 6);
 #endif
 
-
-	Serial		uart( MB_TX, MB_RX, 115200);
 
 	uart.printf("Hello, world!\r\n");
 

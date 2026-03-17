@@ -3,7 +3,9 @@
  *
  *  Supports:
  *    FRDM-MCXA153  (CPU_MCXA153VLH)   LPUART0/1/2
+ *    FRDM-MCXA156  (CPU_MCXA156VLL)   LPUART0/1/2
  *    FRDM-MCXN236  (CPU_MCXN236VDF)   LP_FLEXCOMM2/5 (LPUART2/5)
+ *    FRDM-MCXN947  (CPU_MCXN947VDF)   LP_FLEXCOMM4 (LPUART4)
  *    FRDM-MCXC444  (CPU_MCXC444VLH)   LPUART0/1
  *
  *  Design note:
@@ -30,10 +32,10 @@ extern "C" {
 #include "fsl_clock.h"
 #include "fsl_port.h"
 #include "fsl_common.h"
-#if defined( CPU_MCXN236VDF )
+#if defined( CPU_MCXN236VDF ) || defined( CPU_MCXN947VDF )
 #  include "fsl_lpflexcomm.h"
 #  include "fsl_reset.h"
-#elif defined( CPU_MCXA153VLH )
+#elif defined( CPU_MCXA153VLH ) || defined( CPU_MCXA156VLL )
 #  include "fsl_reset.h"
 #endif
 }
@@ -106,7 +108,61 @@ void     Serial::_unregister_instance( void ) { s_instances[ _instance ] = nullp
 
 
 // ===========================================================================
-//  MCX N236  (LP_FLEXCOMM, CLOCK_AttachClk, CLOCK_GetLPFlexCommClkFreq)
+//  MCX A156  (LPUART0/1/2, PORT mux, CLOCK_AttachClk / CLOCK_SetClockDiv)
+// ===========================================================================
+#elif defined( CPU_MCXA156VLL )
+
+static Serial *s_instances[ 3 ] = { nullptr, nullptr, nullptr };
+
+extern "C"
+{
+    void LPUART0_IRQHandler( void ) { if ( s_instances[0] ) s_instances[0]->_irq_handler(); SDK_ISR_EXIT_BARRIER; }
+    void LPUART1_IRQHandler( void ) { if ( s_instances[1] ) s_instances[1]->_irq_handler(); SDK_ISR_EXIT_BARRIER; }
+    void LPUART2_IRQHandler( void ) { if ( s_instances[2] ) s_instances[2]->_irq_handler(); SDK_ISR_EXIT_BARRIER; }
+}
+
+struct lpuart_pin_map_t {
+    int               tx_pin, rx_pin;
+    LPUART_Type      *base;
+    uint32_t          instance;
+    port_mux_t        mux;
+    reset_ip_name_t   rst;
+    IRQn_Type         irqn;
+    clock_attach_id_t clk_attach;
+    clock_div_name_t  clk_div;
+};
+
+static const lpuart_pin_map_t s_pinMap[] = {
+    //  TX      RX      base     inst  mux             rst                        irqn          clk_attach           clk_div
+    { USBTX, USBRX, LPUART0, 0U, kPORT_MuxAlt2, kLPUART0_RST_SHIFT_RSTn, LPUART0_IRQn, kFRO12M_to_LPUART0, kCLOCK_DivLPUART0 }, // P0_3/P0_2
+    { MB_TX, MB_RX, LPUART1, 1U, kPORT_MuxAlt2, kLPUART1_RST_SHIFT_RSTn, LPUART1_IRQn, kFRO12M_to_LPUART1, kCLOCK_DivLPUART1 }, // P3_21/P3_20
+    { D1,    D0,    LPUART2, 2U, kPORT_MuxAlt2, kLPUART2_RST_SHIFT_RSTn, LPUART2_IRQn, kFRO12M_to_LPUART2, kCLOCK_DivLPUART2 }, // P2_10/P2_11
+};
+
+void Serial::resolve_pins( int tx, int rx )
+{
+    _base = nullptr;
+    for ( size_t i = 0; i < sizeof(s_pinMap)/sizeof(s_pinMap[0]); i++ )
+    {
+        if ( s_pinMap[i].tx_pin == tx && s_pinMap[i].rx_pin == rx )
+        {
+            _base       = s_pinMap[i].base;
+            _instance   = s_pinMap[i].instance;
+            _mux        = s_pinMap[i].mux;
+            _irqn       = s_pinMap[i].irqn;
+            _rst        = s_pinMap[i].rst;
+            _clk_attach = s_pinMap[i].clk_attach;
+            _clk_div    = s_pinMap[i].clk_div;
+            return;
+        }
+    }
+}
+
+void     Serial::_setup_clock( void )    { CLOCK_SetClockDiv( _clk_div, 1U ); CLOCK_AttachClk( _clk_attach ); }
+uint32_t Serial::_get_clk_freq( void )   { return CLOCK_GetLpuartClkFreq( _instance ); }
+void     Serial::_release_reset( void )  { RESET_ReleasePeripheralReset( _rst ); }
+void     Serial::_register_instance( void )   { s_instances[ _instance ] = this; }
+void     Serial::_unregister_instance( void ) { s_instances[ _instance ] = nullptr; }
 // ===========================================================================
 #elif defined( CPU_MCXN236VDF )
 
@@ -154,6 +210,58 @@ void Serial::resolve_pins( int tx, int rx )
 void     Serial::_setup_clock( void )    { CLOCK_AttachClk( _clk_attach ); }
 uint32_t Serial::_get_clk_freq( void )   { return CLOCK_GetLPFlexCommClkFreq( _instance ); }
 void     Serial::_release_reset( void )  {     RESET_PeripheralReset( _rst ); RESET_ReleasePeripheralReset( _rst ); LP_FLEXCOMM_Init( _instance, LP_FLEXCOMM_PERIPH_LPUART ); }
+void     Serial::_register_instance( void )   { s_instances[ _instance ] = this; }
+void     Serial::_unregister_instance( void ) { s_instances[ _instance ] = nullptr; }
+
+
+// ===========================================================================
+//  MCX N947  (LP_FLEXCOMM, CLOCK_AttachClk, CLOCK_GetLPFlexCommClkFreq)
+// ===========================================================================
+#elif defined( CPU_MCXN947VDF )
+
+static Serial *s_instances[ 10 ] = {};
+
+extern "C"
+{
+    void LP_FLEXCOMM4_IRQHandler( void ) { if ( s_instances[4] ) s_instances[4]->_irq_handler(); SDK_ISR_EXIT_BARRIER; }
+}
+
+struct lpuart_pin_map_t {
+    int               tx_pin, rx_pin;
+    LPUART_Type      *base;
+    uint32_t          instance;
+    port_mux_t        mux;
+    reset_ip_name_t   rst;
+    IRQn_Type         irqn;
+    clock_attach_id_t clk_attach;
+};
+
+static const lpuart_pin_map_t s_pinMap[] = {
+    //  USBTX=P1_9(TX) / USBRX=P1_8(RX)  -> FC4 LPUART4, Alt2
+    { USBTX, USBRX, LPUART4, 4U, kPORT_MuxAlt2, kFC4_RST_SHIFT_RSTn, LP_FLEXCOMM4_IRQn, kFRO12M_to_FLEXCOMM4 },
+};
+
+void Serial::resolve_pins( int tx, int rx )
+{
+    _base = nullptr;
+    for ( size_t i = 0; i < sizeof(s_pinMap)/sizeof(s_pinMap[0]); i++ )
+    {
+        if ( s_pinMap[i].tx_pin == tx && s_pinMap[i].rx_pin == rx )
+        {
+            _base       = s_pinMap[i].base;
+            _instance   = s_pinMap[i].instance;
+            _mux        = s_pinMap[i].mux;
+            _irqn       = s_pinMap[i].irqn;
+            _rst        = s_pinMap[i].rst;
+            _clk_attach = s_pinMap[i].clk_attach;
+            return;
+        }
+    }
+}
+
+void     Serial::_setup_clock( void )    { CLOCK_AttachClk( _clk_attach ); }
+uint32_t Serial::_get_clk_freq( void )   { return CLOCK_GetLPFlexCommClkFreq( _instance ); }
+void     Serial::_release_reset( void )  { RESET_PeripheralReset( _rst ); RESET_ReleasePeripheralReset( _rst ); LP_FLEXCOMM_Init( _instance, LP_FLEXCOMM_PERIPH_LPUART ); }
 void     Serial::_register_instance( void )   { s_instances[ _instance ] = this; }
 void     Serial::_unregister_instance( void ) { s_instances[ _instance ] = nullptr; }
 

@@ -3,6 +3,7 @@
  *
  *  Supports:
  *    FRDM-MCXA153  (CPU_MCXA153VLH)   LPUART0/1/2
+ *    FRDM-MCXA156  (CPU_MCXA156VLL)   LPUART0/1/2
  *    FRDM-MCXN236  (CPU_MCXN236VDF)   LP_FLEXCOMM2/5 (LPUART2/5)
  *    FRDM-MCXN947  (CPU_MCXN947VDF)   LP_FLEXCOMM4 (LPUART4)
  *    FRDM-MCXC444  (CPU_MCXC444VLH)   LPUART0/1
@@ -97,7 +98,7 @@ private:
     int             _rx_pin;
 
     // ---- target-specific clock / reset fields ----
-#if defined( CPU_MCXA153VLH )
+#if defined( CPU_MCXA153VLH ) || defined( CPU_MCXA156VLL )
     reset_ip_name_t   _rst;
     clock_attach_id_t _clk_attach;
     clock_div_name_t  _clk_div;
